@@ -16,10 +16,20 @@ twitch.configuration.onChanged(function(){
    
   configs = loadConfig(twitch);
    if (configs != ""){
-       currentCurrency = configs.currency;
-       currentCoin = configs.coin;
-       currentMaxPolling = configs.maxPolling;
-       currentFloatPrecision = configs.floatPrecision;
+       twitch.rig.log("config found");
+       twitch.rig.log(configs);
+       if (configs.hasOwnProperty('currency')){
+          currentCurrency = configs.currency;
+       }
+       if (configs.hasOwnProperty('coin')){
+          currentCoin = configs.coin;
+       }
+       if (configs.hasOwnProperty('maxPolling')){
+          currentMaxPolling = configs.maxPolling;
+       }
+       if (configs.hasOwnProperty('floatPrecision')){
+          currentFloatPrecision = configs.floatPrecision;
+       }
    }
    // Rally.io consts
    
