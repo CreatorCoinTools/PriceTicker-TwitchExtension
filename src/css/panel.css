@@ -3,11 +3,9 @@ html{
 }
 
 body{
-background-color: gray;
 height: 100%;
 margin: 0;
-background-repeat: no-repeat;
-background-attachment: fixed;
+background:linear-gradient(gray, gray, gray) no-repeat 0px 10px;
 }
 
 .coin-logo {
@@ -56,7 +54,7 @@ h1 {
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
 h1 {
-  font-size: 50px;
+  font-size: 48px;
 }
 }
 
@@ -101,8 +99,7 @@ background-color: gray;
 .panel-header {
 background: rgb(34,193,195);
 background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,96,253,1) 100%);
-border-bottom-left-radius: 2rem;
-border-bottom-right-radius: 2rem;
+border-radius: 10px;
 padding-bottom: 20px;
 }
 .no-margin-padding {
@@ -127,7 +124,7 @@ li {
 }
 
 .coin-name {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h3 {
@@ -146,7 +143,7 @@ background-color: white;
 padding: 3px;
 border-radius: 3px;
 z-index: 100;
-width: 20vw;
+width: 70vw;
 }
 
 .logo-type{
