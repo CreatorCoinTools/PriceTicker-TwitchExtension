@@ -1,0 +1,158 @@
+html{
+  height: 100%; 
+}
+
+body{
+background-color: gray;
+height: 100%;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.coin-logo {
+  max-width: 10vw;
+  border-radius: 50%;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+background: rgba(0,0,0,0.4);
+}
+
+.nav-white-a {
+  color: white;
+  text-decoration: none;
+}
+.nav-white-a:hover {
+  color: red;
+}
+
+.coin-name {
+   text-align: center;
+}
+
+.flex-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-btn {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+h1{
+color: white;
+font-weight: bold;
+-webkit-text-stroke: 2px blue; 
+}
+@media screen and (min-width: 601px) {
+h1 {
+  font-size: 80px;
+}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+h1 {
+  font-size: 50px;
+}
+}
+
+.panel-card {
+display: inline-block;
+padding: 10px;
+min-width: 100%;
+margin-top: 10px;
+background-color: gray;
+position: relative;
+transition: all .2s ease-in-out;
+border-radius: 0;
+}
+
+.text {
+color: #FFF;
+padding: 5px;
+text-align: center;
+-webkit-text-stroke: 2px blue; 
+font-weight: bold;
+}
+
+.text p {
+margin-bottom: 0px;
+}
+
+.coins-list{
+list-style: none;
+padding: 5px;
+}
+
+ul {
+  padding: 0;
+  width:100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.panel-header-background{
+background-color: gray;
+}
+.panel-header {
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,96,253,1) 100%);
+border-bottom-left-radius: 2rem;
+border-bottom-right-radius: 2rem;
+padding-bottom: 20px;
+}
+.no-margin-padding {
+padding-left: 0;
+padding-right: 0;
+margin: 0;
+}
+li {
+  background-color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+.btn-outline-secondary {
+  color: white;
+  border-color: white;
+}
+
+.img-fluid {
+  width: 60px;
+  height: 60px;
+}
+
+.coin-name {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.btn {
+padding: 0;
+}
+.tooltiptext {
+display: none;
+position: absolute;
+top: 3vh;
+right: 10vw;
+background-color: white;
+padding: 3px;
+border-radius: 3px;
+z-index: 100;
+width: 20vw;
+}
+
+.logo-type{
+color: white;
+}
+
+#tooltip:hover .tooltiptext {
+display: block;
+}
