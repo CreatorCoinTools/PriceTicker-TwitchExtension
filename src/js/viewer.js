@@ -39,7 +39,7 @@ twitch.configuration.onChanged(function(){
           if (out[item].coinSymbol == currentCoin){
               twitch.rig.log(out[item]);
               $('#current-coin-name').html(out[item].coinName);
-              $('#current- coin-image').attr('src', out[item].coinImagePath);
+              $('#current-coin-image').attr('src', out[item].coinImagePath);
               $('#tooltiptext').text(`${out[item].coinName} is a creator token from rally.io. You can visit ? for more info.`);
               return
           }

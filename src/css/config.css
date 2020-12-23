@@ -40,3 +40,14 @@ h2{
     min-width: 50%;
     height: 40px;
 }
+
+.config-text {
+    color: white;
+}
+.flex {
+    display: flex;
+}
+.justify-content-center {
+    align-items: center;
+    justify-content: center;
+}

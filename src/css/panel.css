@@ -6,11 +6,14 @@ body{
 height: 100%;
 margin: 0;
 background:linear-gradient(gray, gray, gray) no-repeat 0px 10px;
+overflow-y: hidden; // hide vertical
+overflow-x: hidden; // hide horizontal
 }
 
 .coin-logo {
   max-width: 10vw;
   border-radius: 50%;
+ vertical-align:middle; 
 }
 
 .navbar.transparent.navbar-inverse .navbar-inner {
@@ -122,7 +125,7 @@ li {
 }
 
 .coin-name {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h3 {
@@ -146,6 +149,7 @@ width: 70vw;
 
 .logo-type{
 color: white;
+
 }
 
 #tooltip:hover .tooltiptext {

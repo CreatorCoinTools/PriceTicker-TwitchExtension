@@ -17,7 +17,6 @@ $(document).ready(function() {
     getAllCreatorCoins()
     .then((out) => {
       for(var item in out){
-        console.log('Item: ', out[item]);
         $('#coins-select').append("<option value='"+out[item].coinSymbol+"'><span style='width:10px; height:10px; background-image:url("+ out[item].coinImagePath +");'><span>"+out[item].coinName+"</option>");
       }
       if (configs != ""){
