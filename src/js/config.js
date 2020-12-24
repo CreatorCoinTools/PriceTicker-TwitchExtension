@@ -58,9 +58,11 @@ twitch.configuration.onChanged(function(){
 });
 
 function save(coinSymbol, currencySymbol, maxPollinginMinutes, floatPrecision){
+  $("#saved").hide();
   configs = {"currency": currencySymbol, "coin": coinSymbol, "maxPolling": maxPollinginMinutes, "floatPrecision": floatPrecision};
   // save config in twitch configurations.
   saveConfig(twitch, configs);
+  $("#saved").show();
 }
 
 function setCurrentCoin(coinSymbol){
