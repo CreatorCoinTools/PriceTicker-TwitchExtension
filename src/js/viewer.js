@@ -18,16 +18,16 @@ twitch.configuration.onChanged(function(){
    if (configs != ""){
        twitch.rig.log("config found");
        twitch.rig.log(configs);
-       if (configs.hasOwnProperty('currency')){
+       if (configs.hasOwnProperty('currency') && configs.currency != ""){
           currentCurrency = configs.currency;
        }
-       if (configs.hasOwnProperty('coin')){
+       if (configs.hasOwnProperty('coin') && configs.coin != ""){
           currentCoin = configs.coin;
        }
-       if (configs.hasOwnProperty('maxPolling')){
+       if (configs.hasOwnProperty('maxPolling') && configs.maxPolling != "" ){
           currentMaxPolling = configs.maxPolling;
        }
-       if (configs.hasOwnProperty('floatPrecision')){
+       if (configs.hasOwnProperty('floatPrecision') && configs.floatPrecision != ""){
           currentFloatPrecision = configs.floatPrecision;
        }
    }
@@ -40,7 +40,7 @@ twitch.configuration.onChanged(function(){
               twitch.rig.log(out[item]);
               $('#current-coin-name').html(out[item].coinName);
               $('#current-coin-image').attr('src', out[item].coinImagePath);
-              $('#tooltiptext').text(`${out[item].coinName} is a creator token from rally.io. You can visit ? for more info.`);
+              $('#tooltiptext').text(`Learn more about ${out[item].creatorPreferredName} Creator Coin by going to rally.io.`);
               return
           }
         }
