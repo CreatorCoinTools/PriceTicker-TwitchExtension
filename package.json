@@ -30,6 +30,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
+    "spectrum-colorpicker": "^1.8.1",
     "style-loader": "^2.0.0"
   }
 }
