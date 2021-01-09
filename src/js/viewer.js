@@ -30,6 +30,60 @@ twitch.configuration.onChanged(function(){
        if (configs.hasOwnProperty('floatPrecision') && configs.floatPrecision != ""){
           currentFloatPrecision = configs.floatPrecision;
        }
+
+       // Set header gradient color.
+       if (configs.hasOwnProperty('headerStartColor') && configs.headerStartColor != ""){
+         currentHeaderStartColor = configs.headerStartColor;
+         if (configs.hasOwnProperty('headerEndColor') && configs.headerEndColor != ""){
+            currentHeaderEndColor = configs.headerEndColor;
+            $(".panel-header").css({
+               "backgroundImage": `linear-gradient(0deg, rgba(134,193,20,1) 0%, rgba(45,196,253,1) 100%);` 
+             });
+             
+           
+         }
+       }
+       // Set price bg color.
+       if (configs.hasOwnProperty('priceBG') && configs.priceBG != ""){
+         $("body").css({
+            background: `linear-gradient(${configs.priceBG}, ${configs.priceBG}, ${configs.priceBG}) no-repeat 0px 10px`
+         });
+          $(".panel-card").css({
+            "background-color": configs.priceBG
+         });
+         $(".panel-header-background").css({
+            "background-color": configs.priceBG
+         });
+       }
+       // Set font color.
+       if (configs.hasOwnProperty('fontColor') && configs.fontColor != ""){
+         $(".text").css({
+            "color": configs.fontColor
+         });
+         $(".coin-name").css({
+            "color": configs.fontColor
+         });
+       }
+       // Set font stroke color.
+       if (configs.hasOwnProperty('fontStrokeColor') && configs.fontStrokeColor != ""){
+         $(".text").css({
+            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
+         });
+         $(".coin-name").css({
+            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
+         });
+       }
+
+       // Set font family.
+       if (configs.hasOwnProperty('fontFamily') && configs.fontFamily != ""){
+         $(".text").css({
+            fontFamily: "'"+configs.fontFamily+"'"
+         });
+         $(".coin-name").css({
+            fontFamily: "'"+configs.fontFamily+"'"
+         });
+       }
+
    }
    // Rally.io consts
    

@@ -5,7 +5,7 @@ html{
 body{
 height: 100%;
 margin: 0;
-background:linear-gradient(gray, gray, gray) no-repeat 0px 10px;
+background: linear-gradient(gray, gray, gray) no-repeat 0px 10px;
 overflow-y: hidden; // hide vertical
 overflow-x: hidden; // hide horizontal
 }
@@ -125,6 +125,7 @@ li {
 }
 
 .coin-name {
+  color: #FFF;
   font-size: 20px;
 }
 
