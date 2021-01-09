@@ -4,6 +4,11 @@ var twitch = window.Twitch ? window.Twitch.ext : null;
 
 var configs = "";
 
+// Apearance presets.
+const presets = {
+     "Dark": "#ffffff, #ffffff, #ffffff, #ffffff, #ffffff",
+     "Solarized": "#342342, #32e323, #ff6565, #123212, #768876"
+}
 // Pickr objects.
 var pickrHeaderStart, pickrHeaderEnd, pickrPriceBG, pickrPriceFont, pickrPriceFontStroke;
 // pickr swatches.
@@ -73,6 +78,18 @@ $(document).ready(function() {
       }
     }).catch(err => twitch.rig.log(err));
 
+    // Set apearance presets.
+    for(var k in presets){
+        $('#presets-select').append("<option  value='"+presets[k]+"'><span style='width:10px; height:10px;'><span>"+k+"</option>");
+    }
+    $('#presets-select').on('change', function() {
+        colors = this.value.split(",");
+        pickrHeaderStart.setColor(colors[0].trim());
+        pickrHeaderEnd.setColor(colors[1].trim());
+        pickrPriceBG.setColor(colors[2].trim());
+        pickrPriceFont.setColor(colors[3].trim());
+        pickrPriceFontStroke.setColor(colors[4].trim());
+    });
 
     // Header start color pickr.
     pickrHeaderStart = Pickr.create({
@@ -117,9 +134,8 @@ $(document).ready(function() {
     // Font selector.
     $('#font-select').fontselect({
       systemFonts: ['Arial','Times+New+Roman', 'Verdana'],
-      localFonts: ['Action+Man', 'Bauer', 'Bubble'],
-      googleFonts: ['Piedra', 'Questrial', 'Ribeye'],
-      localFontsUrl: 'fonts/' // End with a slash!
+//      localFonts: ['Action+Man', 'Bauer', 'Bubble'],
+//      localFontsUrl: '/dist/fonts/' // End with a slash!
     });
 
     $('#save-config').click(function(){

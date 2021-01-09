@@ -43,6 +43,21 @@ h2{
 
 .config-text {
     color: white;
+    font-size: 16px;
+}
+p {
+    color: white;
+    font-size: 20px;
+}
+i {
+    color: white;
+    font-size: 22px;
+}
+.pickr-text {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
 }
 .flex {
     display: flex;

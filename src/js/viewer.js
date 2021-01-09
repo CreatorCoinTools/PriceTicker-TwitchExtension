@@ -37,7 +37,8 @@ twitch.configuration.onChanged(function(){
          if (configs.hasOwnProperty('headerEndColor') && configs.headerEndColor != ""){
             currentHeaderEndColor = configs.headerEndColor;
             $(".panel-header").css({
-               "backgroundImage": `linear-gradient(0deg, rgba(134,193,20,1) 0%, rgba(45,196,253,1) 100%);` 
+               //"backgroundImage": `linear-gradient(0deg, rgba(134,193,20,1) 0%, rgba(45,196,253,1) 100%);` 
+               'background': `-webkit-gradient(linear,left top,left bottom,from(${currentHeaderStartColor}),to(${currentHeaderEndColor}))`
              });
              
            
@@ -46,7 +47,8 @@ twitch.configuration.onChanged(function(){
        // Set price bg color.
        if (configs.hasOwnProperty('priceBG') && configs.priceBG != ""){
          $("body").css({
-            background: `linear-gradient(${configs.priceBG}, ${configs.priceBG}, ${configs.priceBG}) no-repeat 0px 10px`
+            background: `linear-gradient(${configs.priceBG}, ${configs.priceBG}, \
+             ${configs.priceBG}) no-repeat 0px 10px`
          });
           $(".panel-card").css({
             "background-color": configs.priceBG
@@ -67,10 +69,12 @@ twitch.configuration.onChanged(function(){
        // Set font stroke color.
        if (configs.hasOwnProperty('fontStrokeColor') && configs.fontStrokeColor != ""){
          $(".text").css({
-            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
+            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, \
+             -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
          });
          $(".coin-name").css({
-            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
+            "text-shadow": `-1px -1px 0 ${configs.fontStrokeColor}, 1px -1px 0 ${configs.fontStrokeColor}, \
+             -1px 1px 0 ${configs.fontStrokeColor}, 1px 1px 0 ${configs.fontStrokeColor}`
          });
        }
 
