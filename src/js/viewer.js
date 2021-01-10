@@ -98,7 +98,12 @@ twitch.configuration.onChanged(function(){
               twitch.rig.log(out[item]);
               $('#current-coin-name').html(out[item].coinName);
               $('#current-coin-image').attr('src', out[item].coinImagePath);
-              $('#tooltiptext').text(`Learn more about ${out[item].creatorPreferredName} Creator Coin by going to rally.io.`);
+              $('#tooltiptext').html(`Learn more about ${out[item].creatorPreferredName} Creator Coin by going to <a id="rally" href="https://rally.io">rally.io</a>.`);
+              $("#rally").on('click', 'a', function(e){ 
+               e.preventDefault(); 
+               var url = $(this).attr('href'); 
+               window.open(url, '_blank');
+              });
               return
           }
         }

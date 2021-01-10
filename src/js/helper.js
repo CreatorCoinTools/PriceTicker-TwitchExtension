@@ -23,8 +23,8 @@ function getCurrencyRates(){
 
 // save broadcaster configs
 function saveConfig(twitch, configs){
-  twitch.rig.log(configs);
   twitch.configuration.set("broadcaster", "1", JSON.stringify(configs));
+  console.log(configs);
 }
 
 // load broadcaster configs
@@ -32,16 +32,15 @@ function loadConfig(twitch){
   if (twitch.configuration.broadcaster){
       try{
         var result = JSON.parse(twitch.configuration.broadcaster.content);
-        twitch.rig.log(typeof result);
         if (typeof result == "object"){
             return result;
         }else{
-          twitch.rig.log("invalid config");
+          console.log("invalid config");
         }
       }catch(e){
-        twitch.rig.log(e);
+        console.log(e);
       }
   }
-  twitch.rig.log("no configs");
+  console.log("no configs");
   return ""
 }
