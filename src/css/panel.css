@@ -1,0 +1,158 @@
+html{
+  height: 100%; 
+}
+
+body{
+height: 100%;
+margin: 0;
+background: linear-gradient(gray, gray, gray) no-repeat 0px 10px;
+overflow-y: hidden; // hide vertical
+overflow-x: hidden; // hide horizontal
+}
+
+.coin-logo {
+  max-width: 10vw;
+  border-radius: 50%;
+ vertical-align:middle; 
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+background: rgba(0,0,0,0.4);
+}
+
+.nav-white-a {
+  color: white;
+  text-decoration: none;
+}
+.nav-white-a:hover {
+  color: red;
+}
+
+.coin-name {
+   text-align: center;
+}
+
+.flex-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-btn {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+h1{
+color: white;
+text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
+}
+@media screen and (min-width: 601px) {
+h1 {
+  font-size: 80px;
+}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+h1 {
+  font-size: 48px;
+}
+}
+
+.panel-card {
+display: inline-block;
+padding: 10px;
+min-width: 100%;
+margin-top: 10px;
+background-color: gray;
+position: relative;
+transition: all .2s ease-in-out;
+border-radius: 0;
+}
+
+.text {
+color: #FFF;
+padding: 5px;
+text-align: center;
+text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
+}
+
+.text p {
+margin-bottom: 0px;
+}
+
+.coins-list{
+list-style: none;
+padding: 5px;
+}
+
+ul {
+  padding: 0;
+  width:100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.panel-header-background{
+background-color: gray;
+}
+.panel-header {
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,96,253,1) 100%);
+border-radius: 10px;
+padding-bottom: 20px;
+}
+.no-margin-padding {
+padding-left: 0;
+padding-right: 0;
+margin: 0;
+}
+li {
+  background-color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+.btn-outline-secondary {
+  color: white;
+  border-color: white;
+}
+
+.img-fluid {
+  width: 60px;
+  height: 60px;
+}
+
+.coin-name {
+  color: #FFF;
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.btn {
+padding: 0;
+}
+.tooltiptext {
+display: none;
+position: absolute;
+top: 3vh;
+right: 10vw;
+background-color: white;
+padding: 3px;
+border-radius: 3px;
+z-index: 100;
+width: 70vw;
+}
+
+.logo-type{
+color: white;
+
+}
+
+#tooltip:hover .tooltiptext {
+display: block;
+}
